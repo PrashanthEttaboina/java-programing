@@ -20,7 +20,7 @@ this.employee_blood=employee_blood;
 this.employee_designation=employee_designation;
 this.company_name="Apashyampak kirikiri";
 this.display();
-this.display("details");
+this.display("details");   //Method Over loading is used here
 }
 
 void display()
