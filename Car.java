@@ -1,25 +1,68 @@
-class Vehicle 
+public class Car
 {
+void start()
+{
+System.out.println("All cars start using keys ");
+}
 void engine()
 {
-System.out.println("This car have the highest model of engine ");
+System.out.println("Every car have its own engine ");
 }
-void tyre()
+}
+
+
+
+
+class BMW extends Car  //Hierarchial inheritance is used 
 {
-System.out.println("This car has 5 tyres ");
-}
-void Fuel()
+void mileage()
 {
-System.out.println("This car runs of Diesel ");
+System.out.println("BMW car gives 12km of Mileage");
 }
-}
-public class Car extends Vehicle    //Single inheritance
+void cost()
 {
+System.out.println("BMW costs around 30 lakhs ");
+}
+void speed()
+{
+System.out.println("top speed of a BMW car is 240 km/hr ");
+}
 public static void main(String args[])
 {
-Car Benz=new Car();
-Benz.engine();
-Benz.tyre();
-Benz.Fuel();
+BMW car1= new BMW();
+car1.start();
+car1.engine();
+car1.mileage();
+car1.speed();
+car1.cost();
 }
 }
+
+
+
+
+class Audi extends Car  //Hierarchial inheritance is used 
+{
+void mileage()
+{
+System.out.println("Audi car gives 8km of Mileage");
+}
+void cost()
+{
+System.out.println("Audi costs around 50 lakhs ");
+}
+void speed()
+{
+System.out.println("top speed of a Audi car is 300 km/hr ");
+}
+public static void main(String args[])
+{
+Audi car2= new Audi();
+car2.start();
+car2.engine();
+car2.mileage();
+car2.speed();
+car2.cost();
+}
+}
+
