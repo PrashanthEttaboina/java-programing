@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor='lightskyblue'>
+<br><br>
+<center><h2>WELCOME TO DOCTOR REGISTRATION PAGE </h2></center>
+<br>
+<form action="./DoctorRegister" method="post" align ="center">
+<br>
+<label>Name : </label>
+<input type="text" name="name" placeholder="Enter Name : ">
+<br><br>
+<label>Password : </label>
+<input type="password" name="password" placeholder="Enter Password : ">
+<br><br>
+<label>Email id : </label>
+<input type="email" name="email" placeholder="Enter email-id : ">
+<br><br>
+<label>Mobile Number : </label>
+<input type="text" name="phone" placeholder="Enter phone number : ">
+<br><br>
+<label>Specialisation : </label>
+<select name="specialisation" >
+<option value ="ENT">ENT</option>
+<option value =Dermatologist>Dermatologist</option>
+<option value="Neurologist">Neurologist</option>
+<option value="Dentist">Dentist</option>
+<option value="Cardiologist">Cardiolist</option>
+<option value ="Psychiatrist">Psychiatrist</option>
+<option value ="Pediatrician">Pediatrician</option>
+<option value ="Gynecologist">Gynecologist</option>
+</select>
+<br><br>
+<label>Date of Birth : </label>
+<input type ="date"  name="date_of_birth" placeholder="Enter Date of Birth : ">
+<br><br>
+<p>Select your timings : </p>
+<input type = "radio" name= "timings" value="Morning">Morning
+<input type = "radio" name= "timings" value="Afternoon">Afternoon
+<input type = "radio" name= "timings" value="Evening">Evening
+<br><br>
+<label>Experience in years : </label>
+<input type="text" name="experience" placeholder= "Enter your Experience : ">
+<br><br>
+<input type="Submit" value="Register">
+<br><br>
+<a href="index.html">
+Home
+</a>
+</form>
+</body>
+</html>
