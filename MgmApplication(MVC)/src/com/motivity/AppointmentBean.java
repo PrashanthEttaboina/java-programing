@@ -102,10 +102,10 @@ public class AppointmentBean {
 			return false;
 	}
 
-	public List<AppointmentBean> status(int aid) throws ClassNotFoundException, SQLException{
+	public List<AppointmentBean> status(int pid) throws ClassNotFoundException, SQLException{
 		Connection con=ConnectionEst.connectivity();
 		PreparedStatement ps=con.prepareStatement("select * from appointment where pid=?");
-		ps.setInt(1, aid);
+		ps.setInt(1, pid);
 		ResultSet rs=ps.executeQuery();
 		ArrayList<AppointmentBean> appointment_details=new ArrayList<>();
 		while(rs.next()) {
