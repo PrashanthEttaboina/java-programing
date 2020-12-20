@@ -5,8 +5,8 @@
 <body bgcolor="lightskyblue">
 <center><h2>WELCOME TO MEDICAL PATHOLOGIST HOME</h2></center>
 <br><br>
-<a href="view_test_appointments.jsp">View Test Appointments</a> |
-<a href="view_pathologist_profile.jsp">Pathologist Profile</a> |
+<a href="appoint_lab_test.jsp">Apply for a Test</a> |
+<a href="view_patient_profile.jsp">Patient Profile</a> |
 <a href="index.html">Log-Out</a>
 
 </body>

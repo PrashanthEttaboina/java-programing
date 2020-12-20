@@ -13,6 +13,6 @@
 <property name="dialet">org.hibernate.dialect.MySQLDialect</property>
 <property name="hbm2ddl.auto">update</property>
 <mapping resource="PathologistDetails.xml"/>
-
+<mapping resource ="PatientDetails.xml"/>
 </session-factory>
 </hibernate-configuration>
