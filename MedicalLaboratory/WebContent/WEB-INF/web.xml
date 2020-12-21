@@ -35,4 +35,13 @@
 <url-pattern>/patient_login</url-pattern>
 </servlet-mapping>
 
+
+<servlet>
+<servlet-name>five</servlet-name>
+<servlet-class>com.main.ApplyTest</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>five</servlet-name>
+<url-pattern>/apply_lab_test</url-pattern>
+</servlet-mapping>
 </web-app>
