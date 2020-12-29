@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
 <servlet>
+<servlet-name>zero</servlet-name>
+<servlet-class>com.main.AdminLogin</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>zero</servlet-name>
+<url-pattern>/admin_login</url-pattern>
+</servlet-mapping>
+
+<servlet>
 <servlet-name>one</servlet-name>
 <servlet-class>com.main.PathologistRegister</servlet-class>
 </servlet>
@@ -38,10 +47,10 @@
 
 <servlet>
 <servlet-name>five</servlet-name>
-<servlet-class>com.main.ApplyTest</servlet-class>
+<servlet-class>com.main.PathologistUpdate</servlet-class>
 </servlet>
 <servlet-mapping>
 <servlet-name>five</servlet-name>
-<url-pattern>/apply_lab_test</url-pattern>
+<url-pattern>/update_pathologist_profile</url-pattern>
 </servlet-mapping>
 </web-app>

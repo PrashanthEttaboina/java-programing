@@ -5,6 +5,9 @@ import java.io.IOException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.pojo.Pathologist;
 
 public class PathologistLogin extends HttpServlet{
 
@@ -12,14 +15,15 @@ public class PathologistLogin extends HttpServlet{
 	{
 		String email=request.getParameter("email");
 		String password=request.getParameter("password");
-		boolean pathologist_login_status=false;
-		pathologist_login_status=PathologistLoginBean.login(email, password);
-		if(pathologist_login_status) {
+		Pathologist p=PathologistLoginBean.login(email, password);
+		HttpSession hs=request.getSession();
+		if(p!=null) {
+			
+			hs.setAttribute("pathologist_id",p.getLab_doctor_id());
 			response.sendRedirect("./pathologist_home.jsp?msg=login sucessfully");
 		}
 		else
 			response.sendRedirect("./pathologist_login.html?msg=login failed");
 	}
-
 }
 

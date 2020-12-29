@@ -5,7 +5,7 @@
 
 <hibernate-mapping>
 <class name="com.pojo.Patient" table="patient">
-<id name="patient_id" column="lab_doctor_id"></id>
+<id name="patient_id" column="patient_id"></id>
 <property name="patient_name" column="name"></property>
 <property name="patient_gender" column="gender"></property>
 <property name="date_of_birth" column="date_of_birth"></property>
