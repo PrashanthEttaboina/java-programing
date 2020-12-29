@@ -10,12 +10,11 @@ public class PathologistUpdateBean {
 	public static boolean update(Pathologist path) {
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
-		Object o=se.merge(path);
+		se.update(path);
 		tx.commit();
-		if(o!=null)
+		
 			return true;
-		else
-			return false;
+		
 	}
 
 }
