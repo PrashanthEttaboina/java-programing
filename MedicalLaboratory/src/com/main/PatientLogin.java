@@ -13,8 +13,8 @@ import com.pojo.Patient;
 
 		public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 		{
-			String email=request.getParameter("patient_email");
-			String password=request.getParameter("patient_password");
+			String email=request.getParameter("email");
+			String password=request.getParameter("password");
 			Patient p=PatientLoginBean.login(email, password);
 			HttpSession hs=request.getSession();
 			if(p!=null) {

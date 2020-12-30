@@ -2,7 +2,14 @@ package com.pojo;
 
 public class Pathologist {
 private int lab_doctor_id;
-private String doctor_name,gender,doctor_email,doctor_password,doctor_phone,doctor_specialisation,doctor_experience,doctor_address;
+private String doctor_name;
+private String gender;
+private String doctor_email;
+private String doctor_password;
+private String doctor_phone;
+private String doctor_specialisation;
+private String doctor_experience;
+private String doctor_address;
 public int getLab_doctor_id() {
 	return lab_doctor_id;
 }

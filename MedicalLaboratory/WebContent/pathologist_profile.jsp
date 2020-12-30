@@ -9,7 +9,7 @@
 <a href="index.html">Log-Out</a><br><br><br>
 </center>
 <%@page import="com.pojo.Pathologist,com.main.PathologistBean,java.util.*" %>
-<table border="2" align="center" width="600" height="100" cellpadding="20">
+<table border="2" align="center" width="600" height="30" cellpadding="20">
 <tr>
 <td>Lab Doctor Id</td>
 <td>Name</td>

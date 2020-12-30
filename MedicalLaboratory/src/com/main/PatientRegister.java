@@ -13,13 +13,13 @@ public class PatientRegister extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		Patient pat=new Patient();
-		pat.setPatient_name(request.getParameter("patient_name"));
-		pat.setPatient_gender(request.getParameter("patient_gender"));
+		pat.setPatient_name(request.getParameter("name"));
+		pat.setPatient_gender(request.getParameter("gender"));
 		pat.setDate_of_birth(request.getParameter("date_of_birth"));
-		pat.setPatient_email(request.getParameter("patient_email"));
-		pat.setPatient_password(request.getParameter("patient_password"));
-		pat.setPatient_phone(request.getParameter("patient_phone"));
-		pat.setPatient_address(request.getParameter("patient_address"));
+		pat.setPatient_email(request.getParameter("email"));
+		pat.setPatient_password(request.getParameter("password"));
+		pat.setPatient_phone(request.getParameter("phone"));
+		pat.setPatient_address(request.getParameter("address"));
 		
 		boolean patient_registration_status=false;
 		 patient_registration_status=PatientRegisterBean.register(pat);

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.pojo.BloodTest" table="blood_test">
+<id name="bid" column="bid"></id>
+<property name="pat_id" column="pat_id"></property>
+<property name="patient_name" column="patient_name"></property>
+<property name="patient_gender" column="patient_gender"></property>
+<property name="date_of_birth" column="date_of_birth"></property>
+<property name="patient_phone" column="phone"></property>
+<property name="test_type" column="test_type"></property>
+<property name="referred_by_doctor" column="referred_by_doctor"></property>
+<property name="date_and_time" column="date_and_time"></property>
+<property name="blood_group" column="blood_group"></property>
+<property name="hemoglobin" column="hemoglobin"></property>
+<property name="rbc_count" column="rbc_count"></property>
+<property name="mcv" column="mcv"></property>
+<property name="mch" column="mch"></property>
+<property name="mchc" column="mchc"></property>
+<property name="rdw" column="rdw"></property>
+<property name="wbc_count" column="wbc_count"></property>
+<property name="pathologist_id" column="pathologist_id"></property>
+<property name="pathologist_name" column="pathologist_name"></property>
+</class>
+</hibernate-mapping>
