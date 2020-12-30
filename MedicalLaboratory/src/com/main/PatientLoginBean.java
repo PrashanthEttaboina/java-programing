@@ -10,7 +10,7 @@ import com.pojo.Patient;
 
 public class PatientLoginBean {
 
-	public static boolean login(String email, String password) {
+	public static Patient login(String email, String password) {
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
 		Query q=se.createQuery("from Patient p where p.patient_email=:x and p.patient_password=:y");
@@ -19,9 +19,9 @@ public class PatientLoginBean {
 		List<Patient> l=q.list();
 		tx.commit();
 		if(!l.isEmpty()) {
-			return true;
+			Patient pa = l.get(0);
+			return pa;
 		}
-		return false;
+		return null;
 	}
-
 }

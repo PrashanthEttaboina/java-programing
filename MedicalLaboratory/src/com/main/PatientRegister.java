@@ -19,11 +19,11 @@ public class PatientRegister extends HttpServlet {
 		pat.setPatient_email(request.getParameter("patient_email"));
 		pat.setPatient_password(request.getParameter("patient_password"));
 		pat.setPatient_phone(request.getParameter("patient_phone"));
-		pat.setPatient_address(request.getParameter("Pateint_address"));
+		pat.setPatient_address(request.getParameter("patient_address"));
 		
 		boolean patient_registration_status=false;
 		 patient_registration_status=PatientRegisterBean.register(pat);
-	//	System.out.println(patient_registration_status);
+
 		 if(patient_registration_status)
 		 {
 			 response.sendRedirect("./patient_login.html?msg=Registered Successfully");
