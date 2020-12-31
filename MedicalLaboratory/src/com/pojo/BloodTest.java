@@ -3,8 +3,8 @@ package com.pojo;
 public class BloodTest {
 
 	private int bid;
-	private int pat_id,pathologist_id;
-	private String patient_name,patient_gender,date_of_birth,patient_phone,test_type,referred_by_doctor,date_and_time,blood_group,hemoglobin,rbc_count,mcv,mch,mchc,rdw,wbc_count,pathologist_name;
+	private int pat_id;
+	private String patient_name,patient_gender,date_of_birth,patient_phone,test_type,referred_by_doctor,date_and_time,blood_group,hemoglobin,rbc_count,mcv,mch,mchc,rdw,wbc_count;
 	public String getPatient_name() {
 		return patient_name;
 	}
@@ -95,12 +95,7 @@ public class BloodTest {
 	public void setWbc_count(String wbc_count) {
 		this.wbc_count = wbc_count;
 	}
-	public String getPathologist_name() {
-		return pathologist_name;
-	}
-	public void setPathologist_name(String pathologist_name) {
-		this.pathologist_name = pathologist_name;
-	}
+
 	public int getBid() {
 		return bid;
 	}
@@ -112,12 +107,5 @@ public class BloodTest {
 	}
 	public void setPat_id(int pat_id) {
 		this.pat_id = pat_id;
-	}
-	
-	public int getPathologist_id() {
-		return pathologist_id;
-	}
-	public void setPathologist_id(int pathologist_id) {
-		this.pathologist_id = pathologist_id;
-	}
+	}	
 }

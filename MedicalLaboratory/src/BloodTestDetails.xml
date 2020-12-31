@@ -10,7 +10,7 @@
 <property name="patient_name" column="patient_name"></property>
 <property name="patient_gender" column="patient_gender"></property>
 <property name="date_of_birth" column="date_of_birth"></property>
-<property name="patient_phone" column="phone"></property>
+<property name="patient_phone" column="patient_phone"></property>
 <property name="test_type" column="test_type"></property>
 <property name="referred_by_doctor" column="referred_by_doctor"></property>
 <property name="date_and_time" column="date_and_time"></property>
@@ -22,7 +22,5 @@
 <property name="mchc" column="mchc"></property>
 <property name="rdw" column="rdw"></property>
 <property name="wbc_count" column="wbc_count"></property>
-<property name="pathologist_id" column="pathologist_id"></property>
-<property name="pathologist_name" column="pathologist_name"></property>
 </class>
 </hibernate-mapping>

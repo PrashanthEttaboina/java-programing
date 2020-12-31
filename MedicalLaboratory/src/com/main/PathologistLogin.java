@@ -20,6 +20,9 @@ public class PathologistLogin extends HttpServlet{
 		if(p!=null) {
 			
 			hs.setAttribute("pathologist_id",p.getLab_doctor_id());
+			hs.setAttribute("specialisation",p.getDoctor_specialisation());
+			hs.setAttribute("pathologist_name",p.getDoctor_name());
+			hs.setAttribute("pathologist", p);
 			response.sendRedirect("./pathologist_home.jsp?msg=login sucessfully");
 		}
 		else

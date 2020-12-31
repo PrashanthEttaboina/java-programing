@@ -7,8 +7,8 @@
 <center><h1>WELCOME TO LAB TEST APPlICATION PAGE</h1>
 <br>
 <a href="patient_home.html">Home</a> |
-<a href="apply_blood_test.jsp">Complete Blood Test</a> |
-<a href="apply_urine_test.jsp">Complete Urine Test</a> |
+<a href="apply_blood_test.jsp">Apply for Complete Blood Test</a> |
+<a href="apply_urine_test.jsp">Apply for Complete Urine Test</a> |
 <a href="index.html">Logout</a> 
 </center>
 </body>

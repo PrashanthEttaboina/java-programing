@@ -7,7 +7,6 @@
 <br><br>
 <a href="pathologist_profile.jsp">View Profile</a> |
 <a href="view_test_appointments.jsp">View Test Appointments</a> |
-
 <a href="index.html">Log-Out</a>
 
 </body>

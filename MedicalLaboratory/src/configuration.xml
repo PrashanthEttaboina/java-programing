@@ -14,7 +14,7 @@
 <property name="hbm2ddl.auto">update</property>
 <mapping resource="PathologistDetails.xml"/>
 <mapping resource ="PatientDetails.xml"/>
-
+<mapping resource ="BloodTestDetails.xml"/>
 
 </session-factory>
 </hibernate-configuration>
