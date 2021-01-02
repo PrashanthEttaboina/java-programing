@@ -22,5 +22,6 @@
 <property name="mchc" column="mchc"></property>
 <property name="rdw" column="rdw"></property>
 <property name="wbc_count" column="wbc_count"></property>
+<property name="status" column="status"></property>
 </class>
 </hibernate-mapping>

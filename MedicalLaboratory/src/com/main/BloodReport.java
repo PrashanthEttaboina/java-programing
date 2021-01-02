@@ -30,6 +30,7 @@ public class BloodReport extends HttpServlet {
 		bt.setMchc(request.getParameter("mchc"));
 		bt.setRdw(request.getParameter("rdw"));
 		bt.setWbc_count(request.getParameter("wbc_count"));
+		bt.setStatus(request.getParameter("status"));
 		
 		boolean test_report_status=false;
 		test_report_status=BloodReportBean.report(bt);
@@ -39,8 +40,6 @@ public class BloodReport extends HttpServlet {
 			 response.sendRedirect("./view_test_appointments.jsp?msg=Reported Successfully");
 		 }
 		 else
-			 response.sendRedirect("./generate_blood_report.jsp?msg=Reporting Faliled");
-			
-	}
-	
+			 response.sendRedirect("./generate_blood_report.jsp?msg=Reporting Faliled");		
+	}	
 }

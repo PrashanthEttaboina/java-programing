@@ -4,7 +4,13 @@ public class BloodTest {
 
 	private int bid;
 	private int pat_id;
-	private String patient_name,patient_gender,date_of_birth,patient_phone,test_type,referred_by_doctor,date_and_time,blood_group,hemoglobin,rbc_count,mcv,mch,mchc,rdw,wbc_count;
+	private String patient_name,patient_gender,date_of_birth,patient_phone,test_type,referred_by_doctor,date_and_time,blood_group,hemoglobin,rbc_count,mcv,mch,mchc,rdw,wbc_count,status;
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public String getPatient_name() {
 		return patient_name;
 	}

@@ -49,8 +49,5 @@ if(specialisation.equalsIgnoreCase("Blood test"))
 		<%
 		} 
 } %>
-
-
-
 </body>
 </html>

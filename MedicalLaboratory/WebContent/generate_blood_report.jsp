@@ -84,7 +84,7 @@ while(i.hasNext())
 <label>WBC count : </label>
 <input type="text" name="wbc_count" placeholder="Enter wbc">
 <br><br>
-
+<input type="hidden" name="status" value="updated">
 <input type="Submit" value="Update">
 <br><br>
 <a href="index.html">

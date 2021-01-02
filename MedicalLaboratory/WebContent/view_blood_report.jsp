@@ -44,7 +44,7 @@ while(i.hasNext())
 <td>RDW : </td><td><%=pt.getRdw() %></td></tr>
 <tr>
 <td>WBC Count : </td><td><%=pt.getWbc_count() %></td></tr>
-
 <%} %>
+<center> <button onclick="window.print()"> Print Report </button></center><br><br>
 </body>
 </html>
