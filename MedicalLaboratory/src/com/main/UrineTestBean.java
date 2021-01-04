@@ -7,17 +7,18 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import com.pojo.BloodTest;
+import com.pojo.UrineTest;
 
 
-public class BloodTestBean {
+public class UrineTestBean {
 
-	public static List<BloodTest> viewBloodTests()
+	public static List<UrineTest> viewUrineTests()
 	{
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
 	
-		Query qe=se.createQuery("from BloodTest b"); //for pathologist to view all appointments
-		List<BloodTest> bi=qe.list();
+		Query qe=se.createQuery("from UrineTest u"); //for pathologist to view all appointments
+		List<UrineTest> bi=qe.list();
 		tx.commit();
 		if(!bi.isEmpty()) {
 			return bi;
@@ -26,14 +27,14 @@ public class BloodTestBean {
 			return null;	
 	}
 	
-	public static List<BloodTest> searchById(int id) //for pathologist to update report 
+	public static List<UrineTest> searchById(int id) //for pathologist to update report 
 	{
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
 	
-		Query qe=se.createQuery("from BloodTest b where b.bid=:x");
+		Query qe=se.createQuery("from UrineTest u where u.uid=:x");
 		qe.setParameter("x", id);
-		List<BloodTest> bi=qe.list();
+		List<UrineTest> bi=qe.list();
 		tx.commit();
 		if(!bi.isEmpty()) {
 			return bi;
@@ -42,14 +43,14 @@ public class BloodTestBean {
 			return null;	
 	}
 	
-	public static List<BloodTest> getByPatientId(int id) //for patient personal test report 
+	public static List<UrineTest> getByPatientId(int id) //for patient personal test report 
 	{
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
 	
-		Query qe=se.createQuery("from BloodTest b where b.pat_id=:x");
+		Query qe=se.createQuery("from UrineTest u where u.pat_id=:x");
 		qe.setParameter("x", id);
-		List<BloodTest> bi=qe.list();
+		List<UrineTest> bi=qe.list();
 		tx.commit();
 		if(!bi.isEmpty()) {
 			return bi;
@@ -58,15 +59,14 @@ public class BloodTestBean {
 			return null;	
 	}
 	
-	
-	public static List<BloodTest> searchAdmin(String patient_name,String test_type) //for Admin Search
+	public static List<UrineTest> searchAdmin(String patient_name,String test_type) //for Admin Search
 	{
 		Session se=Config.config();
 		Transaction tx=se.beginTransaction();
 	
-		Query qe=se.createQuery("from BloodTest b where b.patient_name=:x");
+		Query qe=se.createQuery("from UrineTest u where u.patient_name=:x");
 		qe.setParameter("x",patient_name);
-		List<BloodTest> bi=qe.list();
+		List<UrineTest> bi=qe.list();
 		tx.commit();
 		if(!bi.isEmpty()) {
 			return bi;
@@ -74,5 +74,4 @@ public class BloodTestBean {
 		else
 			return null;	
 	}
-	
 }

@@ -1,39 +1,82 @@
 <!DOCTYPE html>
 <html>
-<body bgcolor='lightskyblue'>
+<head>
+<style>
+body, html {
+	height: 100%;
+	margin: 0;
+}
+.bg {
+	/* The image used */
+	background-image: url("bg1.jpg");
+	/* Full height */
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+</style>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body bgcolor="lightskyblue" class="bg">
 <br><br>
-<center><h2>WELCOME TO PATIENT REGISTRATION PAGE </h2></center>
+<center style="color:white;"><h2> WELCOME TO PATIENT REGISTRATION PAGE </h2>
 <br>
-<form action="./patient_registration" method="post" align ="center">
+<a style="color:white;" href="index.html">Home</a></center>
+<div class="container">
+		<div class="row justify-content-center align-items-center"
+			style="height: 50vh">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body">
+<form action="./patient_registration" method="post" >
 <br>
+<div class="form-group">
 <label>Name : </label>
-<input type="text" name="name" placeholder="Enter Name  ">
-<br><br>
-<p> Gender : </p>
+<input type="text" class="form-control" name="name" placeholder="Enter Name  ">
+</div>
+<div class="form-group">
+<label> Gender : </label>
 <input type = "radio" name= "gender" value="Male">Male
 <input type = "radio" name= "gender" value="Female">Female
-<input type = "radio" name= "gender" value="Others">Others
-<br><br>
-<p> Date of Birth :</p>
-<input type="date" name="date_of_birth"><br><br>
+</div>
+<div class="form-group">
+<label> Date of Birth :</label>
+<input type="date" name="date_of_birth">
+</div>
+<div class="form-group">
 <label>Email id : </label>
-<input type="email" name="email" placeholder="Enter email-id  ">
-<br><br>
+<input type="email" class="form-control" name="email" placeholder="Enter email-id  ">
+</div>
+<div class="form-group">
 <label>Password : </label>
-<input type="password" name="password" placeholder="Enter Password  ">
-<br><br>
+<input type="password" class="form-control" name="password" placeholder="Enter Password  ">
+</div>
+<div class="form-group">
 <label>Mobile Number : </label>
-<input type="text" name="phone" placeholder="Enter phone number  ">
-<br><br>
+<input type="text" class="form-control" name="phone" placeholder="Enter phone number  ">
+</div>
+<div class="form-group">
 <label>Address : </label>
-<input type="text" name="address" placeholder="Enter address  ">
-<br><br>
+<input type="text" class="form-control" name="address" placeholder="Enter address  ">
+</div>
 
-<input type="Submit" value="Register">
+<input type="Submit" class="btn btn-primary"  value="Register">
 <br><br>
-<a href="index.html">
-Home
-</a>
 </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</center>
 </body>
 </html>

@@ -2,34 +2,71 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<body bgcolor="lightskyblue">
-<center><h2>WELCOME TO (ADMIN)PATHOLOGISTS PROFILE PAGE</h2></center>
+<head>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  /* The image used */
+  background-image: url("bg1.jpg");
+  /* Full height */
+  height: 100%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body bgcolor="lightskyblue" class="bg">
+<center style="color:white;"><h2>WELCOME TO (ADMIN)PATHOLOGISTS PROFILE PAGE</h2></center>
 <br><br><center>
-<a href="admin_home.html">Home</a>|
-<a href="index.html">Log-Out</a><br><br><br>
+<a style="color:white;" href="admin_home.html">Home</a>|
+<a style="color:white;" href="index.html">Log-Out</a><br><br><br>
 </center>
-
+<div class="container">
+		<div class="row justify-content-center align-items-center"
+			style="height: 50vh">
+			<div class="col-4">
+				<div class="card">
+					<div class="card-body">
 <form action="view_pathologists.jsp" align="center">
-Search By Specialisation: <input type="text" name="doctor_specialisation">
+<div class="form-group">
+<label>Search By Specialisation:</label>
+<input type="text" class="form-control" name="doctor_specialisation">
 
-Or Search By Pathologist Name: <input type="text" name="doctor_name">
-<input type="submit" value="search"><br>
-<br><br>
+<label>Or Search By Pathologist Name:</label> 
+<input type="text" class="form-control" name="doctor_name">
+<input type="submit" class="btn btn-primary" value="search"><br>
 </form>
-
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
 <%@page import="com.pojo.Pathologist,com.main.PathologistBean,java.util.*" %>
-<table border="2" align="center" width="100" height="20" cellpadding="10">
-<tr>
-<td>Lab Doctor Id</td>
-<td>Name</td>
-<td>Gender</td>
-<td>Email</td>
-<td>Phone</td>
-<td>Specialisation</td>
-<td>Experience</td>
-<td>Address</td>
+<table class="table table-bordered table-light">
+<tr class="table-success">
+<td><b>Lab Doctor Id</b></td>
+<td><b>Name</b></td>
+<td><b>Gender</b></td>
+<td><b>Email</b></td>
+<td><b>Phone</b></td>
+<td><b>Specialisation</b></td>
+<td><b>Experience</b></td>
+<td><b>Address</b></td>
 </tr>
-
 <%
 String specialisation=request.getParameter("doctor_specialisation");
 String doctor_name=request.getParameter("doctor_name");
@@ -43,7 +80,6 @@ else
 {
 	pa=PathologistBean.search(specialisation,doctor_name);
 }
-
 Iterator<Pathologist> i=pa.iterator();
 while(i.hasNext())
 {
@@ -60,6 +96,6 @@ while(i.hasNext())
 		<td><%=sd.getDoctor_address() %></td>		
 	</tr>	
 	<% } %>
-	</table>
+	</table></div>
 </body>
 </html>

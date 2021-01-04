@@ -15,6 +15,6 @@
 <mapping resource="PathologistDetails.xml"/>
 <mapping resource ="PatientDetails.xml"/>
 <mapping resource ="BloodTestDetails.xml"/>
-
+<mapping resource ="UrineTestDetails.xml"/>
 </session-factory>
 </hibernate-configuration>

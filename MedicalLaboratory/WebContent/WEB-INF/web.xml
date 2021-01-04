@@ -44,6 +44,14 @@
 <url-pattern>/patient_login</url-pattern>
 </servlet-mapping>
 
+<servlet>
+<servlet-name>fourty</servlet-name>
+<servlet-class>com.main.PatientUpdate</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>fourty</servlet-name>
+<url-pattern>/update_patient_profile</url-pattern>
+</servlet-mapping>
 
 <servlet>
 <servlet-name>five</servlet-name>
@@ -71,4 +79,23 @@
 <servlet-name>seven</servlet-name>
 <url-pattern>/generate_blood_report</url-pattern>
 </servlet-mapping>
+
+<servlet>
+<servlet-name>eight</servlet-name>
+<servlet-class>com.main.ApplyUrineTest</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>eight</servlet-name>
+<url-pattern>/apply_urine_test</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>nine</servlet-name>
+<servlet-class>com.main.UrineReport</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>nine</servlet-name>
+<url-pattern>/generate_urine_report</url-pattern>
+</servlet-mapping>
+
 </web-app>

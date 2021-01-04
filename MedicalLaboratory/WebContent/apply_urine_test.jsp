@@ -28,14 +28,13 @@ body, html {
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<body bgcolor='lightskyblue'  class="bg">
+<body bgcolor='lightskyblue' class="bg">
 <br><br>
-<center style="color:white;"><h2>WELCOME TO PATIENT BLOOD TEST APPLICATION PAGE </h2>
-
-<br><br>
-<a style="color:white;" href="index.html">Home</a>
-</center>
+<center style="color:white;"><h2>WELCOME TO PATIENT URINE TEST APPLICATION PAGE </h2>
 <br>
+<a style="color:white;" href="index.html">
+Home
+</a></center>
 <div class="container">
 		<div class="row justify-content-center align-items-center"
 			style="height: 50vh">
@@ -51,18 +50,19 @@ while(i.hasNext())
 {
  	Patient pt=i.next();
  	%>
-<form action="./apply_blood_test" method="post" align ="center">
+<form action="./apply_urine_test" method="post" align ="center">
 <br>
 <div class="form-group">
-<input type="hidden" class="form-control"  name="pat_id" value="<%=pt.getPatient_id() %>" readonly>
-</div>
+<input type="hidden" class="form-control"  name="pat_id" value="<%=pt.getPatient_id() %>" readonly></div>
 <div class="form-group">
 <label>Name : </label>
 <input type="text" class="form-control"  name="patient_name" value="<%=pt.getPatient_name() %>" readonly>
 </div>
+
 <div class="form-group">
 <label> Gender : </label>
-<input type = "text" class="form-control" name= "patient_gender"  value="<%=pt.getPatient_gender() %>" readonly>
+<input type = "radio" name= "patient_gender"  value="Male">Male
+<input type = "radio"name= "patient_gender" value="Female">Female
 </div>
 <div class="form-group">
 <label> Date of Birth :</label>
@@ -81,10 +81,11 @@ while(i.hasNext())
 <input type="datetime-local" class="form-control"  name="date_and_time">
  </div>
  <div class="form-group">
-<input type="hidden" class="form-control" name="test_type" value="Blood Test">
+<input type="hidden" class="form-control" name="test_type" value="Urine Test">
 </div>
 <input type="Submit" class="btn btn-primary" value="Apply">
 <br><br>
+
 </form>
 <% } %>
 </body>

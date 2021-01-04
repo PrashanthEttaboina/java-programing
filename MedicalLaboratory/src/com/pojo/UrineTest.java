@@ -2,87 +2,62 @@ package com.pojo;
 
 public class UrineTest {
 	
-	private int u_id,age,glucose,pid,lab_doc_id;
-	private String pname,pgender,pemail,phone,blood_group,test_name,referred_by_doc,referred_by_hospital,date_and_time,color,clarity,report_details,test_status,pathologist_name;
-	private double pH ,specific_gravity;
-	
-	public int getU_id() {
-		return u_id;
+	private int uid,pat_id;
+	private String patient_name,patient_gender,date_of_birth,patient_phone,test_type,referred_by_doctor ,date_and_time,color,appearance,
+	specific_gravity,ph,protein,glucose,urobilinogen,bilirubin,ketones,nitrites,status;
+	public String getStatus() {
+		return status;
 	}
-	public void setU_id(int u_id) {
-		this.u_id = u_id;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	public int getAge() {
-		return age;
+	public String getPatient_phone() {
+		return patient_phone;
 	}
-	public void setAge(int age) {
-		this.age = age;
+	public void setPatient_phone(String patient_phone) {
+		this.patient_phone = patient_phone;
 	}
-	public int getGlucose() {
-		return glucose;
+	public int getUid() {
+		return uid;
 	}
-	public void setGlucose(int glucose) {
-		this.glucose = glucose;
+	public void setUid(int uid) {
+		this.uid = uid;
 	}
-	public int getPid() {
-		return pid;
+	public int getPat_id() {
+		return pat_id;
 	}
-	public void setPid(int pid) {
-		this.pid = pid;
+	public void setPat_id(int pat_id) {
+		this.pat_id = pat_id;
 	}
-	public int getLab_doc_id() {
-		return lab_doc_id;
+	public String getPatient_name() {
+		return patient_name;
 	}
-	public void setLab_doc_id(int lab_doc_id) {
-		this.lab_doc_id = lab_doc_id;
+	public void setPatient_name(String patient_name) {
+		this.patient_name = patient_name;
 	}
-	public String getPname() {
-		return pname;
+	public String getPatient_gender() {
+		return patient_gender;
 	}
-	public void setPname(String pname) {
-		this.pname = pname;
+	public void setPatient_gender(String patient_gender) {
+		this.patient_gender = patient_gender;
 	}
-	public String getPgender() {
-		return pgender;
+	public String getDate_of_birth() {
+		return date_of_birth;
 	}
-	public void setPgender(String pgender) {
-		this.pgender = pgender;
+	public void setDate_of_birth(String date_of_birth) {
+		this.date_of_birth = date_of_birth;
 	}
-	public String getPemail() {
-		return pemail;
+	public String getTest_type() {
+		return test_type;
 	}
-	public void setPemail(String pemail) {
-		this.pemail = pemail;
+	public void setTest_type(String test_type) {
+		this.test_type = test_type;
 	}
-	public String getPhone() {
-		return phone;
+	public String getReferred_by_doctor() {
+		return referred_by_doctor;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getBlood_group() {
-		return blood_group;
-	}
-	public void setBlood_group(String blood_group) {
-		this.blood_group = blood_group;
-	}
-	public String getTest_name() {
-		return test_name;
-	}
-	public void setTest_name(String test_name) {
-		this.test_name = test_name;
-	}
-	public String getReferred_by_doc() {
-		return referred_by_doc;
-	}
-	public void setReferred_by_doc(String referred_by_doc) {
-		this.referred_by_doc = referred_by_doc;
-	}
-	public String getReferred_by_hospital() {
-		return referred_by_hospital;
-	}
-	public void setReferred_by_hospital(String referred_by_hospital) {
-		this.referred_by_hospital = referred_by_hospital;
+	public void setReferred_by_doctor(String referred_by_doctor) {
+		this.referred_by_doctor = referred_by_doctor;
 	}
 	public String getDate_and_time() {
 		return date_and_time;
@@ -96,43 +71,60 @@ public class UrineTest {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public String getClarity() {
-		return clarity;
+	public String getAppearance() {
+		return appearance;
 	}
-	public void setClarity(String clarity) {
-		this.clarity = clarity;
+	public void setAppearance(String appearance) {
+		this.appearance = appearance;
 	}
-	public String getReport_details() {
-		return report_details;
-	}
-	public void setReport_details(String report_details) {
-		this.report_details = report_details;
-	}
-	public String getTest_status() {
-		return test_status;
-	}
-	public void setTest_status(String test_status) {
-		this.test_status = test_status;
-	}
-	public String getPathologist_name() {
-		return pathologist_name;
-	}
-	public void setPathologist_name(String pathologist_name) {
-		this.pathologist_name = pathologist_name;
-	}
-	public double getpH() {
-		return pH;
-	}
-	public void setpH(double pH) {
-		this.pH = pH;
-	}
-	public double getSpecific_gravity() {
+	public String getSpecific_gravity() {
 		return specific_gravity;
 	}
-	public void setSpecific_gravity(double specific_gravity) {
+	public void setSpecific_gravity(String specific_gravity) {
 		this.specific_gravity = specific_gravity;
 	}
-	
-	
+	public String getPh() {
+		return ph;
+	}
+	public void setPh(String ph) {
+		this.ph = ph;
+	}
+	public String getProtein() {
+		return protein;
+	}
+	public void setProtein(String protein) {
+		this.protein = protein;
+	}
+	public String getGlucose() {
+		return glucose;
+	}
+	public void setGlucose(String glucose) {
+		this.glucose = glucose;
+	}
+	public String getUrobilinogen() {
+		return urobilinogen;
+	}
+	public void setUrobilinogen(String urobilinogen) {
+		this.urobilinogen = urobilinogen;
+	}
+	public String getBilirubin() {
+		return bilirubin;
+	}
+	public void setBilirubin(String bilirubin) {
+		this.bilirubin = bilirubin;
+	}
+	public String getKetones() {
+		return ketones;
+	}
+	public void setKetones(String ketones) {
+		this.ketones = ketones;
+	}
+	public String getNitrites() {
+		return nitrites;
+	}
+	public void setNitrites(String nitrites) {
+		this.nitrites = nitrites;
+	}
+
 
 }
