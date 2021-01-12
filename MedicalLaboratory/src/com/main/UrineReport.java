@@ -28,7 +28,7 @@ public class UrineReport extends HttpServlet {
 		bt.setPh(request.getParameter("ph"));
 		bt.setProtein(request.getParameter("protein"));
 		bt.setGlucose(request.getParameter("glucose"));
-		bt.setUrobilinogen(request.getParameter("uribilinogen"));
+		bt.setUrobilinogen(request.getParameter("urobilinogen"));
 		bt.setBilirubin(request.getParameter("bilirubin"));
 		bt.setKetones(request.getParameter("ketones"));
 		bt.setNitrites(request.getParameter("nitrites"));

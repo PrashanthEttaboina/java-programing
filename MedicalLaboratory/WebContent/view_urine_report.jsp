@@ -49,6 +49,7 @@ while(i.hasNext())
  	else
  	{
 %>
+<center>
 <table style="width: 50%;" class="table table-bordered table-light">
 <tr class="table">
 <td><b>Test Id : </b></td><td><%=pt.getUid() %></td></tr>
@@ -79,7 +80,7 @@ while(i.hasNext())
 <tr>
 <td><b>Ketones : </b></td><td><%=pt.getKetones() %></td></tr>
 <tr>
-<td><b>Nitrites : </b></td><td><%=pt.getNitrites() %></td></tr>
+<td><b>Nitrites : </b></td><td><%=pt.getNitrites() %></td></tr></table></center></div>
 <center> <button class="btn btn-primary" onclick="window.print()"> Print Report </button></center><br><br>
 <%}
 }%>

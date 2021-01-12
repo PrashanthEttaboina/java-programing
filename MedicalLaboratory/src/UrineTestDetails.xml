@@ -19,6 +19,7 @@
 <property name="appearance" column="appearance"></property>
 <property name="specific_gravity" column="specific_gravity"></property>
 <property name="ph" column="ph"></property>
+<property name="protein" column="protein"></property>
 <property name="glucose" column="glucose"></property>
 <property name="urobilinogen" column="urobilinogen"></property>
 <property name="bilirubin" column="bilirubin"></property>

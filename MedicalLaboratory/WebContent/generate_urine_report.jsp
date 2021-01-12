@@ -115,11 +115,11 @@ while(i.hasNext())
 </div>
 <div class="form-group">
 <label>Glucose : </label>
-<input type="text" name="glucose"  class="form-control" placeholder="Enter Glucose">
+<input type="text"  class="form-control" name="glucose"  placeholder="Enter Glucose">
 </div>
 <div class="form-group">
 <label>Urobilinogen : </label>
-<input type="text" name="urobilinogen"  class="form-control" placeholder="Enter urobilinogen">
+<input type="text" class="form-control"  name="urobilinogen" placeholder="Enter urobilinogen">
 </div>
 <div class="form-group">
 <label> Bilirubin : </label>

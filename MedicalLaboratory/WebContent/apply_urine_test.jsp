@@ -53,16 +53,15 @@ while(i.hasNext())
 <form action="./apply_urine_test" method="post" align ="center">
 <br>
 <div class="form-group">
-<input type="hidden" class="form-control"  name="pat_id" value="<%=pt.getPatient_id() %>" readonly></div>
+<input type="hidden" class="form-control"  name="pat_id" value="<%=pt.getPatient_id() %>" readonly>
+</div>
 <div class="form-group">
 <label>Name : </label>
 <input type="text" class="form-control"  name="patient_name" value="<%=pt.getPatient_name() %>" readonly>
 </div>
-
 <div class="form-group">
 <label> Gender : </label>
-<input type = "radio" name= "patient_gender"  value="Male">Male
-<input type = "radio"name= "patient_gender" value="Female">Female
+<input type = "text" class="form-control" name= "patient_gender"  value="<%=pt.getPatient_gender() %>" readonly>
 </div>
 <div class="form-group">
 <label> Date of Birth :</label>

@@ -31,7 +31,7 @@ body, html {
 <body bgcolor="lightskyblue" class="bg">
 <center style="color:white;"><h2><b>WELCOME TO LAB TEST PAGE</b></h2></center>
 <br><br><center>
-<a  style="color:white;" href="patient_home.html">Home</a> |
+<a  style="color:white;" href="patient_home.jsp">Home</a> |
 <a  style="color:white;" href="apply_blood_test.jsp">Apply for Complete Blood Test</a> |
 <a  style="color:white;" href="apply_urine_test.jsp">Apply for Complete Urine Test</a> |
 <a  style="color:white;" href="index.html">Logout</a> 

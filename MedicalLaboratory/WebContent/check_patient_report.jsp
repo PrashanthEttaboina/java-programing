@@ -32,7 +32,7 @@ body, html {
 <center style="color:white;"><h2>WELCOME TO (ADMIN)PATHOLOGISTS TEST REPORT PAGE</h2></center>
 <br><br><center>
 <a  style="color:white;" href="admin_home.html">Home</a>|
-<a  style="color:white;" href="index.html">Log-Out</a><br><br><br>
+<a  style="color:white;" href="index.html">Log-Out</a>
 </center>
 <div class="container">
 		<div class="row justify-content-center align-items-center"
@@ -46,9 +46,9 @@ body, html {
 <input type="text" class="form-control" name="patient_name">
 
 <label>Enter Test Type: </label>
-<input type="text" class="form-control" name="test_type">
+<input type="text" class="form-control" name="test_type"><br><br>
 <input type="submit" class="btn btn-primary" value="search"><br>
-<br><br></form>
+</form>
 </div>
 </div>
 </div>
@@ -61,26 +61,32 @@ String test_type=request.getParameter("test_type");
 if((patient_name==null&&test_type==null)||(test_type.equals("")&&patient_name.equals("")))
 {
 	%>
-	<center style="color:white;"><h3>ENTER THE NAME AND TEST TYPE OF THE REPORT YOU WANT TO SEARCH</h3></center>	
+	<center style="color:black;"><h3>ENTER THE NAME AND TEST TYPE OF THE REPORT YOU WANT TO SEARCH</h3></center>	
 <% }
 else if(test_type.equalsIgnoreCase("Blood Test"))
 {
 List<BloodTest> bt=BloodTestBean.searchAdmin(patient_name,test_type);
+if(bt==null)
+{%>
+	<center style="color:black;"><h3>THE REPORT IS NOT EXISTED PLEASE GIVE THE DETAILS CORRECTLY </h3></center>
+<%}
+else{
 Iterator<BloodTest> i=bt.iterator();
+
 while(i.hasNext())
 {
  	BloodTest pt=i.next();
  	if(pt.getStatus()==null)
  	{ %>
-		<center style="color:white;"><h3>THE REPORT IS NOT UPDATED PLEASE COME BACK LATER </h3></center>
+		<center style="color:black;"><h3>THE REPORT IS NOT UPDATED PLEASE COME BACK LATER </h3></center>
 	<%}
  	else
  	{
  		%>
  		<div class="container">
- 		<center style="color:white;"><h3>HERE IS THE PATIENT REPORT YOU NEEDED </h3></center><br><br>
+ 		<center style="color:black;"><h3>HERE IS THE PATIENT REPORT YOU NEEDED </h3><br><br>
  		<table style="width: 50%;" class="table table-bordered table-light">
-		<tr class="table-success">
+		<tr class="table">
  		<td><b>Test Id : </b></td><td><%=pt.getBid() %></td></tr>
  		<tr>
  		<td><b>Patient Id : </b></td><td><%=pt.getPat_id() %></td></tr>
@@ -106,29 +112,34 @@ while(i.hasNext())
  		<td><b>RDW : </b></td><td><%=pt.getRdw() %></td></tr>
  		<tr>
  		<td><b>WBC Count :</b> </td><td><%=pt.getWbc_count() %></td></tr>
- 		</table></div>
+ 		</table></center>
  		<center> <button class="btn btn-primary" onclick="window.print()"> Print Report </button></center><br><br>
  		<%}	break;
- 	
+}	
 } 
 }
 else if(test_type.equalsIgnoreCase("Urine Test"))
 {
 	List<UrineTest> bt=UrineTestBean.searchAdmin(patient_name,test_type);
+	if(bt==null)
+	{%>
+		<center style="color:black;"><h3>THE REPORT IS NOT EXISTED PLEASE GIVE THE DETAILS CORRECTLY </h3></center>
+	<%}
+	else {
 	Iterator<UrineTest> i=bt.iterator();
 	while(i.hasNext())
 	{
 	 	UrineTest pt=i.next();
 	 	if(pt.getStatus()==null)
 	 	{ %>
-			<center style="color:white;"><h3>THE REPORT IS NOT UPDATED PLEASE COME BACK LATER </h3></center>
+			<center style="color:black;"><h3>THE URINE TEST REPORT IS NOT UPDATED PLEASE COME BACK LATER </h3></center>
 		<%}
 	 	else
 	 	{
 	 		%>
-	 		<center style="color:white;"><h3>HERE IS THE PATIENT REPORT YOU NEEDED </h3></center><br><br>
+	 		<center style="color:black;"><h3>HERE IS THE URINE REPORT FOR THE PATIENT YOU NEEDED </h3><br><br>
 	 		<table style="width: 50%;" class="table table-bordered table-light">
- 			<tr class="table-success">
+ 			<tr class="table">
 	 		<td><b>Test Id : </b></td><td><%=pt.getUid() %></td></tr>
 	 		<tr>
 	 		<td><b>Patient Id : </b></td><td><%=pt.getPat_id() %></td></tr>
@@ -158,8 +169,10 @@ else if(test_type.equalsIgnoreCase("Urine Test"))
 	 		<td><b>Ketones : </b></td><td><%=pt.getKetones() %></td></tr>
 	 		<tr>
 	 		<td><b>Nitrites :</b> </td><td><%=pt.getNitrites() %></td></tr>
-	 		<center> <button style="color:white;" onclick="window.print()"> Print Report </button></center><br><br>
+	 		</table></center></div>
+	 		<center> <button class="btn btn-primary" onclick="window.print()"> Print Report </button></center><br><br>
 	 		<%}break;
+	}
 	}
 }
 %>
