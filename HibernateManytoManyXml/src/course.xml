@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.motivity.Course" table="course">
+<id name="course_id" column="cid"></id>
+<property name="course_name" column="cname" length="30"></property>
+<set name="students" table="courseStudent" cascade="all" >
+<key column="cid"></key>
+<many-to-many column="sid" class="com.motivity.Students"></many-to-many>
+</set>
+</class>
+</hibernate-mapping> 
