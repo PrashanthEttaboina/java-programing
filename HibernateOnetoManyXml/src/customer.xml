@@ -1,0 +1,11 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.cars.Customer" table="customer">
+<id name="customer_id" column="custid"></id>
+<property name="customer_name" column="custname"></property>
+<property name="fcid" column="fcid" insert="false"></property>
+</class>
+</hibernate-mapping> 
