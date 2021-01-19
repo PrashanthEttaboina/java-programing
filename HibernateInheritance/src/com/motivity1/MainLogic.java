@@ -9,23 +9,18 @@ public class MainLogic {
 
 	public static void main(String[] args) {
 		Configuration cf=new Configuration();
-		cf.configure("configuration1.xml");
+		cf.configure("configuration.xml");
 		SessionFactory sf=cf.buildSessionFactory();
 		Session se=sf.openSession();
 
 		Transaction tx=se.beginTransaction();	
 		
 		
-		Cheque c=new Cheque();
+		Cheque1 c=new Cheque1();
 		c.setPayment_id(102);
 		c.setAmount(15000);
-		c.setChequeType("SBI");
+		c.setChequetype("SBI");
 		
-		CreditCard cc=new CreditCard();
-		cc.setPayment_id(103);
-		cc.setAmount(150000);
-		cc.setCctype("ICICI");
-		se.save(cc);
 		
 		se.save(c);
 		tx.commit();

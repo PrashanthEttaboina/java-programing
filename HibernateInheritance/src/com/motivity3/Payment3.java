@@ -1,6 +1,6 @@
-package com.motivity;
+package com.motivity3;
 
-public class Payment {
+public class Payment3 {
 
 	private int payment_id;
 	private int amount;

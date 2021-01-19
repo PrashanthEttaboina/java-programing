@@ -2,16 +2,20 @@
 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<class name="com.motivity1.Payment1" table="payment101">
+<class name="com.motivity3.Payment3" table="payment103">
 <id name="payment_id" column="pid"></id>
-<discriminator column="paytype" type="string" length="20"></discriminator>
 <property name="amount" column="amount"></property>
 
-<subclass name="com.motivity1.CreditCard1" discriminator-value="CC">
-<property name="cctype" column="cctype"></property> 
-</subclass>
-<subclass name="com.motivity1.Cheque1" discriminator-value="CQ">
+
+<union-subclass name="com.motivity3.Cheque3" >
 <property name="chequetype" column="chequetype"></property>
-</subclass>
+</union-subclass>
+
+
+<union-subclass name="com.motivity3.CreditCard3" >
+<property name="cctype" column="cctype"></property>
+</union-subclass>
+
+
 </class>
 </hibernate-mapping>

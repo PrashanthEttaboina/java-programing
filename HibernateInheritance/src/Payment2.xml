@@ -2,20 +2,18 @@
 "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<class name="com.motivity2.Payment" table="payment">
+<class name="com.motivity2.Payment2" table="payment102">
 <id name="payment_id" column="pid"></id>
 <property name="amount" column="amount"></property>
 
+<joined-subclass name="com.motivity2.Cheque2" table="cheque">
+<key column="cid"></key>
+<property name="chequetype" column="chequetype"></property>
+</joined-subclass>
 
-<union-subclass name="com.motivity2.Cheque" >
-<property name="chequeType" column="chequetype"></property>
-</union-subclass>
-
-
-<union-subclass name="com.motivity2.CreditCard" >
+<joined-subclass name="com.motivity2.CreditCard2" table="creditcard">
+<key column="ccid"></key>
 <property name="cctype" column="cctype"></property>
-</union-subclass>
-
-
+</joined-subclass>
 </class>
 </hibernate-mapping>

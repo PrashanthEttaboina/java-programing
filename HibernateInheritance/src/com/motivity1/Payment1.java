@@ -1,6 +1,6 @@
 package com.motivity1;
 
-public class Payment {
+public class Payment1 {
 
 	private int payment_id;
 	private int amount;

@@ -1,6 +1,6 @@
-package com.motivity2;
+package com.motivity1;
 
-public class CreditCard extends Payment {
+public class CreditCard1 extends Payment1 {
 
 	private String cctype;
 
