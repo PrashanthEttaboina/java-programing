@@ -1,11 +1,13 @@
-package springjdbcAnnotations;
+package NamedJdbcTemplate;
 
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.jdbc.support.JdbcAccessor;
 
 @Configuration
 public class Configure {
@@ -22,51 +24,41 @@ public class Configure {
 
 	}
 
-	
 	@Bean
-	public JdbcTemplate jdbcTemplate() {
-		JdbcTemplate jt = new JdbcTemplate();
-		jt.setDataSource(datasource());
+	public NamedParameterJdbcTemplate jdbcTemplate() {
+		NamedParameterJdbcTemplate jt = new NamedParameterJdbcTemplate(datasource());
 		return jt;
 	}
 
 	@Bean
-	public InsertLogic insertbean()
-	{
-		
-		InsertLogic il=new InsertLogic();
-		
+	public InsertLogic insertbean() {
+
+		InsertLogic il = new InsertLogic();
 		il.setJdbcTemplate(jdbcTemplate());
-		return il;				
+		return il;
 	}
-	
+
 	@Bean
-	public UpdateLogic updatebean()
-	{
-		
-		UpdateLogic ul=new UpdateLogic();
+	public UpdateLogic updatebean() {
+
+		UpdateLogic ul = new UpdateLogic();
 		ul.setJdbcTemplate(jdbcTemplate());
-		
-		return ul;				
+		return ul;
 	}
-	
+
 	@Bean
-	public DisplayLogic displaybean()
-	{
-		
-		DisplayLogic dl=new DisplayLogic();
+	public DisplayLogic displaybean() {
+
+		DisplayLogic dl = new DisplayLogic();
 		dl.setJdbcTemplate(jdbcTemplate());
-		
-		return dl;				
+		return dl;
 	}
-	
+
 	@Bean
-	public DeleteLogic deletebean()
-	{
-		
-		DeleteLogic dl=new DeleteLogic();
+	public DeleteLogic deletebean() {
+
+		DeleteLogic dl = new DeleteLogic();
 		dl.setJdbcTemplate(jdbcTemplate());
-		
-		return dl;				
+		return dl;
 	}
 }

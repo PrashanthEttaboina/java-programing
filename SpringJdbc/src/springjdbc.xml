@@ -16,7 +16,7 @@
 </constructor-arg>
 </bean>
 
-<bean id="insert" class="com.SpringJdbc.InsertLogic">
+<bean id="insert" class="com.SpringJdbc.InsertLogic2">
 <property name="jdbcTemplate">
 <ref bean="jt"></ref>
 </property>

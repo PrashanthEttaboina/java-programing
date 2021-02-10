@@ -1,28 +1,20 @@
-package springjdbcAnnotations;
+package NamedJdbcTemplate;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
-import javax.sql.DataSource;
-
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementSetter;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 
 public class InsertLogic {
 
-	
-	
-	
-	JdbcTemplate jdbcTemplate;
+	NamedParameterJdbcTemplate jdbcTemplate;
 
-	public void setJdbcTemplate	(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
+	public void setJdbcTemplate	(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+		this.jdbcTemplate = namedParameterJdbcTemplate;
 	}
-	 
-	
-	
+	 	
 	public void insert() {
 	
 		
@@ -41,19 +33,15 @@ public class InsertLogic {
 			System.out.println("Enter the Crew name  of the Pirate : ");
 			String crew=sc.nextLine();
 			
-			String sql="insert into pirates(name,fathername,job,bounty,crew_name) values(?,?,?,?,?)";
-			int i= jdbcTemplate.update(sql, new PreparedStatementSetter() {
-
-				@Override
-				public void setValues(PreparedStatement ps) throws SQLException {
-					ps.setString(1,name);
-					ps.setString(2,fathername);
-					ps.setString(3,job);
-					ps.setString(4,bounty);
-					ps.setString(5,crew);
-					
-				}				
-			});
+			String sql="insert into pirates(name,fathername,job,bounty,crew_name) values(:a,:b,:c,:d,:e)";
+			Map<String, Object> map = new HashMap<String, Object>();
+			map.put("a", name);
+			map.put("b", fathername);
+			map.put("c", job);
+			map.put("d", bounty);			
+			map.put("e", crew);
+			
+			int i= jdbcTemplate.update(sql,map);
 			if(i>0)
 				System.out.println("record inserted ");
 			System.out.println("Do you want to insert more records ?(y/n): ");
