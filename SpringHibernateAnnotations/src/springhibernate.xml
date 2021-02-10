@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+	<!-- 
+	<beans>
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property> 
+		<property name="url" value="jdbc:mysql://localhost:3306/lotus"></property> 
+		<property name="username" value="root"></property> <property name="password" 
+		value="root"></property> </bean> -->
+
+	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close"> <property name="driverClassName" value="com.mysql.jdbc.Driver" 
+		/> <property name="url" value="jdbc:mysql://localhost:3306/lotus" /> <property 
+		name="username" value="root" /> <property name="password" value="root" /> 
+		</bean> -->
+
+
+<beans>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/lotus" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<bean id="mysessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mappingResources">
+			<list>
+				<value>ninjadetails.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="hibernatetemplate"
+		class="org.springframework.orm.hibernate5.HibernateTemplate">
+		<property name="sessionFactory" ref="mysessionFactory"></property>
+		<property name="checkWriteOperations" value="false"></property>
+	</bean>
+
+	
+	<bean id="hibernateinsert" class="com.ninja.InsertMain">
+		<property name="htemplate" ref="hibernatetemplate" />
+	</bean>
+	<bean id="hibernateupdate" class="com.ninja.UpdateMain">
+		<property name="htemplate" ref="hibernatetemplate" />
+	</bean>
+	<bean id="hibernatedisplay" class="com.ninja.DisplayMain">
+		<property name="htemplate" ref="hibernatetemplate" />
+	</bean>
+	<bean id="hibernatedelete" class="com.ninja.DeleteMain">
+		<property name="htemplate" ref="hibernatetemplate" />
+	</bean>
+
+</beans>
