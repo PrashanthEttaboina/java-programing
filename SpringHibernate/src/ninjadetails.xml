@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.ninja.Ninja" table="ninja">
+		<id name="id" column="nid"></id>
+		<property name="name" column="name"></property>
+		<property name="parentname" column="parentname"></property>
+		<property name="age" column="age"></property>
+		<property name="squadno" column="squad"></property>
+		<property name="village" column="village"></property>
+	</class>
+</hibernate-mapping>
