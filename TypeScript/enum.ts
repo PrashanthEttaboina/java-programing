@@ -5,7 +5,7 @@
 // console.log(c);  //prints the index of the value 
 
 
-enum Color { Black = 2, White = 3, Green = 4 };
+enum Color { Black =2, White = 3, Green = 4 };
 
 var color: Color = Color.Green;
 
