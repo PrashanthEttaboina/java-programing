@@ -26,8 +26,8 @@ function disp_details(id:number,name?:string,mail_id?:string)    //optional para
 }
 
 disp_details(10);
-disp_details(123,"John");
-disp_details(111,"mary","mary@xyz.com");
+disp_details(123,"Prashanth");
+disp_details(111,"Vasanth","vasanth@gmial.com");
 
 
 function calculate_discount(price:number,rate:number = 0.50)  //Default parameter Function

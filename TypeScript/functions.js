@@ -14,8 +14,8 @@ function disp_details(id, name, mail_id) {
         console.log("Email Id", mail_id);
 }
 disp_details(10);
-disp_details(123, "John");
-disp_details(111, "mary", "mary@xyz.com");
+disp_details(123, "Prashanth");
+disp_details(111, "Vasanth", "vasanth@gmial.com");
 function calculate_discount(price, rate) {
     if (rate === void 0) { rate = 0.50; }
     var discount = price * rate;
