@@ -1,19 +1,21 @@
 <div class="container mt-5">
-    <h2>List of Employees</h2>
-     <a routerLink="employee/add/0" class="btn btn-primary">Add Employee</a>
-    <form (ngSubmit)="onSearch(f)" #f="ngForm">
+    <h2>Employee List</h2>
+     <!-- <a routerLink="employee/add/0" class="btn btn-primary">Add Employee</a> -->
+    <!-- <form (ngSubmit)="onSearch(f)" #f="ngForm">
         <div class="form-group">
             <label for="">Name</label>
             <input type="text" class="form-control" ngModel name="name">
         </div>
-        <!-- <div class="form-group">
-            <label for="">Email</label>
-            <input type="text" class="form-control" ngModel name="email">
-        </div>  -->
+      
         <div class="form-group">
-            <button type="submit">search</button>
+            <button class="btn-primary" type="submit">search</button>
         </div>
-    </form>
+    </form> -->
+    <div class="form-group col-md-4">
+        <input type="text" class="form-control"  placeholder="Enter Keyword for filter result" [(ngModel)]="search">
+      </div>
+      
+
     <table class="table">
         <thead>
             <th>Id</th>
@@ -23,13 +25,13 @@
             <th></th>
         </thead>
         <tbody>
-            <tr *ngFor="let employee of employees">
+            <tr *ngFor="let employee of employees | filter:search">
                 <td>{{employee.id}}</td>
                 <td>{{employee.name}}</td>
                 <td>{{employee.email}}</td>
                 <td>{{employee.phone}}</td>
-                <td><a [routerLink]="['employee/edit',employee.id]">Edit</a></td>
-                <td><button (click)="onDelete(employee.id)">delete</button></td>
+                <td><button class="btn-success" [routerLink]="['employee/edit',employee.id]">Edit</button></td>
+                <td><button class="btn-danger" (click)="onDelete(employee.id)">delete</button></td>
             </tr>
         </tbody>
     </table>

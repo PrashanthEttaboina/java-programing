@@ -12,6 +12,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class EditComponent implements OnInit {
   id: number=0;
   header:string="";
+  button:string="";
   employee : Employee = {
     id:0,
     name:"",
@@ -23,10 +24,15 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
     this.id=+this.route.snapshot.params['id'];
     this.header = this.id === 0 ? 'Add Employee': 'Edit Employee';
+     this.button = this.id===0 ? 'Add Employee':'Update';
+     if(this.id===0)
+     {
+      this.employee.id= this.employeeservice.latestid+1;
+     }
     if(this.id != 0){
       this.employee = <Employee> this.employeeservice.onGetEmployee(this.id);
     }
-    this.employee.id= this.employeeservice.employees.length+1;
+   
   
   }
 

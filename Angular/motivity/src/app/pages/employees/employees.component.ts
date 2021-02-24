@@ -8,6 +8,9 @@ import { Employee } from "src/app/model/employee.model";
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements OnInit {
+
+  search : any;
+
   employees: Employee[] = [];
   constructor(private employeeservice:EmployeeService) { }
 

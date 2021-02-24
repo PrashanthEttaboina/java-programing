@@ -7,18 +7,20 @@ export class EmployeeService {
   employees: Employee[] = [
     {
       id:1,
-      name:"Akhil",
-      email: "akhil@gmail.com",
-      phone: 1111
+      name:"Prashanth",
+      email: "Prashanth@gmail.com",
+      phone: 9876565468
     },
     {
       id:2,
-      name:"Prashanth",
-      email: "prashanth@gmail.com",
-      phone: 2222
+      name:"Vasanth",
+      email: "Vasanth@gmail.com",
+      phone: 9877465478
     }
   ];
   emp: any;
+  latestid : number = this.employees.length;
+
   constructor() { }
 
   onGet(){
@@ -27,6 +29,8 @@ export class EmployeeService {
 
   onAdd(employee: Employee){
     this.employees.push(employee);
+    this.latestid=employee.id;
+    
   }
 
   onDelete(id: number){
