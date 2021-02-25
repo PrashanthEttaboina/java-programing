@@ -1,0 +1,53 @@
+-> package.json - contains dependencies and scripts required for the project
+   
+	if you have npm the you will get package-lock.json
+   	if you have yarn you will get yarn-lock.json
+   	in our case we are using npm so we get package-lock.json
+
+-> package-lock.json - they simply ensure consistenet dependencies
+
+folder: node_modules - in this folder all the depnedencies are installed it is created when you run 			create-react-app command or npm install
+
+folder: public - we have the following files
+
+-> manifest.json - is conserned with progressive web apps which is out of scope for beginners
+
+-> favicon.ico 
+-> logo192.png
+-> logo512.png
+   these 3 files contains logo image which you can see in the browser
+
+-> index.html - it is the only html file you are going to have in the application.
+		typically you are not going to add any code in this file. 
+		maybe some changes in the head tag but not in the body tag. 
+		you want react to control the ui and for that purpose we have one div tag with 		id="root" i.e <div id="root"></div> at runtime the react application takes over this 		div tag and is ultimately responsible for the ui.
+
+
+Folder: src - where you will work more for developing 
+-> index.js - it is the starting point for react application. in index.js we specify the root 		component which is the App component 
+			<React.StrictMode>
+    				<App />
+  			</React.StrictMode>
+		and a dom element which will be controlled by react. 
+	example: element with id root -> document.getElementById('root')
+	root is the element which we have specified in the index.html 
+	we call this div element as the root dom node because everything inside it will be controlled 	by react
+
+	<React.StrictMode>
+    		<App />
+  	</React.StrictMode>,
+  	document.getElementById('root')
+
+	the app component (<App />) is rendered inside the root dom node
+	<App /> refers to the app component which is present in App.js 
+	App refers to the view which is displayed in the browser 
+-> App.css - file for styling 
+-> App.test.js - for unit testing 
+-> index.css - is for applying the styles for body tag 
+-> logo.svg - which is referenced under app component
+-> reportWebVitals.js - is conserned with progressive web apps which is out of scope for beginners
+
+
+
+
+Type a message

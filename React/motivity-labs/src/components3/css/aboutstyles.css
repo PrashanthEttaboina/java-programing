@@ -1,0 +1,19 @@
+.h1
+{
+    color:blue;
+}
+
+.footer{
+    /* margin-top: 1rem;
+    padding: 1rem; */
+    
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+.p
+{
+    text-align:justify;
+    line-height:160%;
+}
