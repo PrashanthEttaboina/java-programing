@@ -6,9 +6,11 @@ import reportWebVitals from './reportWebVitals';
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+import Register from './Register'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Register />
   </React.StrictMode>,
   document.getElementById('root')
 );
