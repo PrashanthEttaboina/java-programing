@@ -1,0 +1,44 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="list" class="com.Transport.InjectionList">
+<property name="names" value="Names List"></property>
+<property name="namelist">
+<list>
+<value>Poojitha</value>
+<value>Ram</value>
+<value>Vishal</value>
+<value>Akhil</value>
+<value>Prashanth</value>
+</list>
+</property>
+</bean>
+
+<bean id="set" class="com.Transport.InjectionList">
+<property name="names" value="Names Set"></property>
+<property name="nameset">
+<set>
+<value>Prashanth</value>
+<value>Swethak</value>
+<value>Revanth</value>
+<value>Anirudh</value>
+<value>Pranav</value>
+</set>
+</property>
+</bean>
+
+<bean id="map" class="com.Transport.InjectionList">
+<property name="names" value="Names map"></property>
+<property name="namemap">
+<map>
+<entry key="1" value="Swethak"></entry>
+<entry key="2" value="Pranav"></entry>
+<entry key="3" value="Anirudh"></entry>
+<entry key="4" value="Revanth"></entry>
+<entry key="5" value="Prashanth"></entry>
+
+</map>
+</property>
+</bean>
+
+</beans>

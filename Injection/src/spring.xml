@@ -1,0 +1,26 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+<bean id="audi" class="com.Transport.Car">
+<property name="fuel" value="petrol"/>
+<property name="speed" value="120"></property>
+</bean>
+
+<bean id="RTC" class="com.Transport.Bus">
+<property name="fuel" value="diesel"/>
+<property name="speed" value="40"/>
+</bean>
+
+ <bean id="banglore" class="com.Transport.Travel">
+<property name="vehicle">
+<ref bean="audi"></ref>
+</property> 
+</bean>
+
+<bean id="chennai" class="com.Transport.Travel">
+<property name="vehicle">
+<ref bean="RTC"></ref>
+</property> 
+</bean>
+</beans>

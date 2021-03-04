@@ -1,0 +1,17 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+    "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<bean id="test" class="com.Transport.ConstructorInjection">
+<constructor-arg value="20000" type="int"></constructor-arg>
+<constructor-arg value="Prashanth"></constructor-arg>
+<constructor-arg value="Motivity"></constructor-arg>
+</bean>
+
+
+<bean id="test1" class="com.Transport.ConstructorInjection">
+<constructor-arg value="20000" type="int"></constructor-arg>
+<!-- <constructor-arg value="Prashanth"></constructor-arg> -->
+<constructor-arg value="Motivity"></constructor-arg>
+</bean>
+
+</beans>
