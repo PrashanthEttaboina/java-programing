@@ -3,6 +3,8 @@ package com.PersonVehicle;
 public class Vehicle {
 private int vid;
 private String vname;
+
+
 public int getVid() {
 	return vid;
 }
@@ -14,6 +16,9 @@ public String getVname() {
 }
 public void setVname(String vname) {
 	this.vname = vname;
+}
+public String toString() {
+	return vid+" "+vname;
 }
 
 

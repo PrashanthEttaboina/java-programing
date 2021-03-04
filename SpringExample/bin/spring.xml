@@ -1,14 +1,13 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
     "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
-<bean id="prashanth" class="com.PersonVehicle.Person">
-<property name="pid" value="1"/>
-<property name="pname" value="Prashanth"></property>
-
-</bean>
-
 <bean id="benz" class="com.PersonVehicle.Vehicle">
 <property name="vid" value="1"/>
 <property name="vname" value="Benz"></property>  
+</bean>
+
+<bean id="prashanth" class="com.PersonVehicle.Person">
+<property name="pid" value="1"/>
+<property name="pname" value="Prashanth"></property>
 </bean>
 </beans>
