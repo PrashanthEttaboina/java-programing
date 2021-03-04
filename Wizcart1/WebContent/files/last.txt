@@ -1,0 +1,7 @@
+String test=req.gep
+if(test.equals("bloodTest")){
+
+}
+else{
+
+}

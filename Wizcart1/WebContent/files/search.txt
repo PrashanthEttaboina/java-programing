@@ -1,0 +1,15 @@
+paper publication--> date topic faculty
+
+Seminar -->  place/date/topic/faculty 
+
+achievements-->faculty/position
+
+guest lecture--> faculty/date/topic
+
+placement-->name/company name/ roll number
+
+internship-->sname/roll number/topic
+
+event -->sname/roll number/eventname/topic
+
+score-->name/roll number/ year

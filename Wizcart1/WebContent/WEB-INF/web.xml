@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<context-param>
+		<description>Location to store uploaded file</description>
+		<param-name>file-upload</param-name>
+		<param-value>
+      D:\Project\Wizcart1\WebContent\files\
+   </param-value>
+	</context-param>
+	<context-param>
+		<description>Location to store uploaded file</description>
+		<param-name>file-download</param-name>
+		<param-value>
+      files\
+   </param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>addevent</servlet-name>
+		<servlet-class>com.wizcart.AddEvent</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addevent</servlet-name>
+		<url-pattern>/add_event</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>addbudget</servlet-name>
+		<servlet-class>com.wizcart.AddBudget</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addbudget</servlet-name>
+		<url-pattern>/add_budget</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>studentregister</servlet-name>
+		<servlet-class>com.wizcart.StudentRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>studentregister</servlet-name>
+		<url-pattern>/student_register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>studentlogin</servlet-name>
+		<servlet-class>com.wizcart.StudentLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>studentlogin</servlet-name>
+		<url-pattern>/student_login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>eventregister</servlet-name>
+		<servlet-class>com.wizcart.EventRegistration</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eventregister</servlet-name>
+		<url-pattern>/event_register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>adminlogin</servlet-name>
+		<servlet-class>com.wizcart.AdminLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>adminlogin</servlet-name>
+		<url-pattern>/admin_login</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>eventplannerlogin</servlet-name>
+		<servlet-class>com.wizcart.EventPlannerLogin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eventplannerlogin</servlet-name>
+		<url-pattern>/eventplanner_login</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>eventplannerregister</servlet-name>
+		<servlet-class>com.wizcart.EventPlannerRegister</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>eventplannerregister</servlet-name>
+		<url-pattern>/eventplanner_register</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>givefeedback</servlet-name>
+		<servlet-class>com.wizcart.GiveFeedback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>givefeedback</servlet-name>
+		<url-pattern>/give_feedback</url-pattern>
+	</servlet-mapping>
+	
+</web-app>
