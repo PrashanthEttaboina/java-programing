@@ -1,0 +1,55 @@
+Event Planner :-
+================
+
+--> Register 
+-->Login
+-->Add events -->(Waits for the admin to accept the event)
+-->Add Budget-->(Waits for the admin to accept the budget)
+-->View the events 
+-->Check the feedbacks of his events only 
+-->Check the winner list
+
+
+Admin:-
+=======
+--> login
+--> Applied events--> Accept/Reject
+-->Applied Budget-->Accept/Reject
+-->View the Feedbacks
+-->Check the Winner List
+
+
+Student:-
+=========
+-->Register 
+-->Login
+-->View the Events(only if the budget is fixed)
+-->Register for the event 
+-->Generate Ticket
+-->View ticket and download the acceptance letter
+-->Give the feedback for the events which he had registered
+-->Check the Winner List
+
+
+
+
+About the project
+==================
+Jdk(java development kit)--(1.8 version)
+jre(java runtime environment) Eclipse
+
+codes(java+html)
+
+Tomcat server(it will create your own server on your computer)(9.0)
+
+Mysql(Database) 8.0 version
+
+open eclipse-->select project-->run on server-->browser-->start killing it 
+
+
+
+
+
+
+
+

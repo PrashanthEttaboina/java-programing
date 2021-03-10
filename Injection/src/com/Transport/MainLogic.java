@@ -7,7 +7,20 @@ public class MainLogic {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("springlist.xml");
-
+		
+		ApplicationContext context1 = new ClassPathXmlApplicationContext("spring.xml");
+		
+		ApplicationContext context2 = new ClassPathXmlApplicationContext("constructor.xml");
+		
+		
+		Car c=	(Car) context1.getBean("audi");
+		c.move();
+		System.out.println();
+		
+		Bus b= (Bus) context1.getBean("RTC");
+		b.move();
+		System.out.println();
+						
 		InjectionList il = (InjectionList) context.getBean("list");
 		il.showList();
 
@@ -19,10 +32,10 @@ public class MainLogic {
 		InjectionList i = (InjectionList) context.getBean("map");
 		i.showmap();
 
-//		ConstructorInjection c = (ConstructorInjection) context.getBean("test");
-//		c.display();
-//		ConstructorInjection c1 = (ConstructorInjection) context.getBean("test1");
-//		c1.display();
+		ConstructorInjection ci = (ConstructorInjection) context2.getBean("test");
+		ci.display();
+		ConstructorInjection ci1 = (ConstructorInjection) context2.getBean("test1");
+		ci1.display();
 
 	}
 }
