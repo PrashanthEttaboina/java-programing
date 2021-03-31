@@ -12,8 +12,6 @@ import com.pojo.College;
 import com.pojo.Email;
 import com.pojo.Events;
 
-
-
 public class Configure {
 	public static Session config() {
 		Properties p=new Properties();
